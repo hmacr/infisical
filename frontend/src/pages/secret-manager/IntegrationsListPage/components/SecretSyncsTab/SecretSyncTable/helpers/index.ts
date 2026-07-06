@@ -279,6 +279,10 @@ export const getSecretSyncDestinationColValues = (secretSync: TSecretSync) => {
       primaryText = destinationConfig.stackName;
       secondaryText = "Stack";
       break;
+    case SecretSync.Daytona:
+      primaryText = destinationConfig.organizationName || destinationConfig.organizationId;
+      secondaryText = "Organization";
+      break;
     default:
       throw new Error(`Unhandled Destination Col Values ${destination}`);
   }

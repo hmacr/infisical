@@ -60,6 +60,7 @@ import { CircleCIConnectionMethod } from "@app/hooks/api/appConnections/types/ci
 import { Cloud66ConnectionMethod } from "@app/hooks/api/appConnections/types/cloud-66-connection";
 import { ConvexConnectionMethod } from "@app/hooks/api/appConnections/types/convex-connection";
 import { DatadogConnectionMethod } from "@app/hooks/api/appConnections/types/datadog-connection";
+import { DaytonaConnectionMethod } from "@app/hooks/api/appConnections/types/daytona-connection";
 import { DigiCertConnectionMethod } from "@app/hooks/api/appConnections/types/digicert-connection";
 import { DigitalOceanConnectionMethod } from "@app/hooks/api/appConnections/types/digital-ocean";
 import { DNSMadeEasyConnectionMethod } from "@app/hooks/api/appConnections/types/dns-made-easy-connection";
@@ -325,6 +326,12 @@ export const APP_CONNECTION_MAP: Record<
     image: "Checkly.png",
     category: "MONITORING",
     description: "Synthetic monitoring access for Checkly."
+  },
+  [AppConnection.Daytona]: {
+    name: "Daytona",
+    image: "Daytona.png",
+    category: "INFRASTRUCTURE",
+    description: "Sandbox and environment access for Daytona."
   },
   [AppConnection.Supabase]: {
     name: "Supabase",
@@ -649,6 +656,7 @@ export const getAppConnectionMethodDetails = (method: TAppConnection["method"]) 
       return { name: "Project Token", icon: faKey };
     case RenderConnectionMethod.ApiKey:
     case ChecklyConnectionMethod.ApiKey:
+    case DaytonaConnectionMethod.ApiKey:
     case OpenRouterConnectionMethod.ApiKey:
     case AnthropicConnectionMethod.ApiKey:
     case DevinConnectionMethod.ApiKey:

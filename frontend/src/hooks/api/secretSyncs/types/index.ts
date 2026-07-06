@@ -17,6 +17,7 @@ import { TCloud66Sync } from "./cloud-66-sync";
 import { TCloudflarePagesSync } from "./cloudflare-pages-sync";
 import { TCloudflareWorkersSync } from "./cloudflare-workers-sync";
 import { TDatabricksSync } from "./databricks-sync";
+import { TDaytonaSync } from "./daytona-sync";
 import { TDevinSync } from "./devin-sync";
 import { TDigitalOceanAppPlatformSync } from "./digital-ocean-app-platform-sync";
 import { TExternalInfisicalSync } from "./external-infisical-sync";
@@ -104,7 +105,8 @@ export type TSecretSync =
   | TTriggerDevSync
   | THasuraCloudSync
   | TQoverySync
-  | TCloud66Sync;
+  | TCloud66Sync
+  | TDaytonaSync;
 
 export type TListSecretSyncs = { secretSyncs: TSecretSync[] };
 

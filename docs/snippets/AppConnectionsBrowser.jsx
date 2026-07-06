@@ -182,6 +182,14 @@ export const AppConnectionsBrowser = () => {
       category: "Monitoring",
     },
     {
+      name: "Daytona",
+      slug: "daytona",
+      path: "/integrations/app-connections/daytona",
+      description:
+        "Learn how to connect your Daytona organization to sync secrets from Infisical.",
+      category: "DevOps Tools",
+    },
+    {
       name: "GitHub",
       slug: "github",
       path: "/integrations/app-connections/github",

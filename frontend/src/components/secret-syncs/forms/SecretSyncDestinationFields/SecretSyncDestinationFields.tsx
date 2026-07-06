@@ -19,6 +19,7 @@ import { Cloud66SyncFields } from "./Cloud66SyncFields";
 import { CloudflarePagesSyncFields } from "./CloudflarePagesSyncFields";
 import { CloudflareWorkersSyncFields } from "./CloudflareWorkersSyncFields";
 import { DatabricksSyncFields } from "./DatabricksSyncFields";
+import { DaytonaSyncFields } from "./DaytonaSyncFields";
 import { DevinSyncFields } from "./DevinSyncFields";
 import { DigitalOceanAppPlatformSyncFields } from "./DigitalOceanAppPlatformSyncFields";
 import { ExternalInfisicalSyncFields } from "./ExternalInfisicalSyncFields";
@@ -108,6 +109,8 @@ export const SecretSyncDestinationFields = () => {
       return <RailwaySyncFields />;
     case SecretSync.Checkly:
       return <ChecklySyncFields />;
+    case SecretSync.Daytona:
+      return <DaytonaSyncFields />;
     case SecretSync.Supabase:
       return <SupabaseSyncFields />;
     case SecretSync.DigitalOceanAppPlatform:

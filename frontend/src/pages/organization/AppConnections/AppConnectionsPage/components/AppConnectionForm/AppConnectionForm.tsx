@@ -36,6 +36,7 @@ import { CloudflareConnectionForm } from "./CloudflareConnectionForm";
 import { ConvexConnectionForm } from "./ConvexConnectionForm";
 import { DatabricksConnectionForm } from "./DatabricksConnectionForm";
 import { DatadogConnectionForm } from "./DatadogConnectionForm";
+import { DaytonaConnectionForm } from "./DaytonaConnectionForm";
 import { DbtConnectionForm } from "./DbtConnectionForm";
 import { DevinConnectionForm } from "./DevinConnectionForm";
 import { DigiCertConnectionForm } from "./DigiCertConnectionForm";
@@ -265,6 +266,8 @@ const CreateForm = ({ app, onComplete, projectId }: CreateFormProps) => {
         return <RailwayConnectionForm onSubmit={onSubmit} />;
       case AppConnection.Checkly:
         return <ChecklyConnectionForm onSubmit={onSubmit} />;
+      case AppConnection.Daytona:
+        return <DaytonaConnectionForm onSubmit={onSubmit} />;
       case AppConnection.Chef:
         return <ChefConnectionForm onSubmit={onSubmit} />;
       case AppConnection.Supabase:
@@ -522,6 +525,8 @@ const UpdateForm = ({ appConnection, onComplete }: UpdateFormProps) => {
         return <RailwayConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
       case AppConnection.Checkly:
         return <ChecklyConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
+      case AppConnection.Daytona:
+        return <DaytonaConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
       case AppConnection.Chef:
         return <ChefConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
       case AppConnection.Supabase:

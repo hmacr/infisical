@@ -127,6 +127,7 @@
                       "integrations/app-connections/convex",
                       "integrations/app-connections/databricks",
                       "integrations/app-connections/datadog",
+                      "integrations/app-connections/daytona",
                       "integrations/app-connections/dbt",
                       "integrations/app-connections/devin",
                       "integrations/app-connections/digicert",
@@ -641,6 +642,7 @@
                       "integrations/secret-syncs/cloudflare-pages",
                       "integrations/secret-syncs/cloudflare-workers",
                       "integrations/secret-syncs/databricks",
+                      "integrations/secret-syncs/daytona",
                       "integrations/secret-syncs/devin",
                       "integrations/secret-syncs/digital-ocean-app-platform",
                       "integrations/secret-syncs/flyio",
@@ -1495,6 +1497,18 @@
                       "api-reference/endpoints/app-connections/checkly/create",
                       "api-reference/endpoints/app-connections/checkly/update",
                       "api-reference/endpoints/app-connections/checkly/delete"
+                    ]
+                  },
+                  {
+                    "group": "Daytona",
+                    "pages": [
+                      "api-reference/endpoints/app-connections/daytona/list",
+                      "api-reference/endpoints/app-connections/daytona/available",
+                      "api-reference/endpoints/app-connections/daytona/get-by-id",
+                      "api-reference/endpoints/app-connections/daytona/get-by-name",
+                      "api-reference/endpoints/app-connections/daytona/create",
+                      "api-reference/endpoints/app-connections/daytona/update",
+                      "api-reference/endpoints/app-connections/daytona/delete"
                     ]
                   },
                   {
@@ -2758,6 +2772,19 @@
                       "api-reference/endpoints/secret-syncs/checkly/delete",
                       "api-reference/endpoints/secret-syncs/checkly/sync-secrets",
                       "api-reference/endpoints/secret-syncs/checkly/remove-secrets"
+                    ]
+                  },
+                  {
+                    "group": "Daytona",
+                    "pages": [
+                      "api-reference/endpoints/secret-syncs/daytona/list",
+                      "api-reference/endpoints/secret-syncs/daytona/get-by-id",
+                      "api-reference/endpoints/secret-syncs/daytona/get-by-name",
+                      "api-reference/endpoints/secret-syncs/daytona/create",
+                      "api-reference/endpoints/secret-syncs/daytona/update",
+                      "api-reference/endpoints/secret-syncs/daytona/delete",
+                      "api-reference/endpoints/secret-syncs/daytona/sync-secrets",
+                      "api-reference/endpoints/secret-syncs/daytona/remove-secrets"
                     ]
                   },
                   {

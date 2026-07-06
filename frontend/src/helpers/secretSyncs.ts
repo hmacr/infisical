@@ -174,6 +174,12 @@ export const SECRET_SYNC_MAP: Record<
     category: "MONITORING",
     description: "Environment variables for Checkly monitors."
   },
+  [SecretSync.Daytona]: {
+    name: "Daytona",
+    image: "Daytona.png",
+    category: "INFRASTRUCTURE",
+    description: "Organization secrets for Daytona sandboxes."
+  },
   [SecretSync.Supabase]: {
     name: "Supabase",
     image: "Supabase.png",
@@ -350,7 +356,8 @@ export const SECRET_SYNC_CONNECTION_MAP: Record<SecretSync, AppConnection> = {
   [SecretSync.TriggerDev]: AppConnection.TriggerDev,
   [SecretSync.HasuraCloud]: AppConnection.HasuraCloud,
   [SecretSync.Qovery]: AppConnection.Qovery,
-  [SecretSync.Cloud66]: AppConnection.Cloud66
+  [SecretSync.Cloud66]: AppConnection.Cloud66,
+  [SecretSync.Daytona]: AppConnection.Daytona
 };
 
 export const SECRET_SYNC_INITIAL_SYNC_BEHAVIOR_MAP: Record<

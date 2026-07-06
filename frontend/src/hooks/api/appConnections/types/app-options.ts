@@ -160,6 +160,10 @@ export type TChecklyConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Checkly;
 };
 
+export type TDaytonaConnectionOption = TAppConnectionOptionBase & {
+  app: AppConnection.Daytona;
+};
+
 export type TChefConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Chef;
 };
@@ -379,7 +383,8 @@ export type TAppConnectionOption =
   | TConvexConnectionOption
   | TTriggerDevConnectionOption
   | THasuraCloudConnectionOption
-  | TQoveryConnectionOption;
+  | TQoveryConnectionOption
+  | TDaytonaConnectionOption;
 
 export type TAppConnectionOptionMap = {
   [AppConnection.AWS]: TAwsConnectionOption;
@@ -455,4 +460,5 @@ export type TAppConnectionOptionMap = {
   [AppConnection.TriggerDev]: TTriggerDevConnectionOption;
   [AppConnection.HasuraCloud]: THasuraCloudConnectionOption;
   [AppConnection.Qovery]: TQoveryConnectionOption;
+  [AppConnection.Daytona]: TDaytonaConnectionOption;
 };

@@ -1,0 +1,96 @@
+---
+title: "Daytona Connection"
+description: "Learn how to configure a Daytona Connection for Infisical."
+---
+
+Infisical supports the use of [API Keys](https://www.daytona.io/docs/en/api-keys/) to connect with Daytona.
+
+<Note>
+  Daytona API keys are scoped to a single organization. Secrets synced through this
+  connection are created in the organization associated with the API key.
+</Note>
+
+## Create a Daytona API Key
+
+<Steps>
+  <Step title="Open the Daytona Dashboard and navigate to 'Keys'">
+    Log in to the [Daytona Dashboard](https://app.daytona.io) and open the **Keys** page from the sidebar.
+  </Step>
+  <Step title="Create a new API key">
+    Click **Create Key**, give it a descriptive name, and ensure it has permission to manage
+    secrets for your organization.
+  </Step>
+  <Step title="Copy the generated key and save it">
+    Copy the generated API key and store it somewhere safe — you'll need it in the next step.
+  </Step>
+</Steps>
+
+## Create a Daytona Connection in Infisical
+
+<Tabs>
+  <Tab title="Infisical UI">
+    <Steps>
+      <Step title="Navigate to App Connections">
+        In your Infisical dashboard, navigate to the **Integrations** tab in the desired project, then select **App Connections**.
+
+        ![App Connections Tab](/images/app-connections/general/add-connection.png)
+      </Step>
+      <Step title="Select Daytona Connection">
+        Click **+ Add Connection** and choose **Daytona Connection** from the list of integrations.
+      </Step>
+      <Step title="Fill out the Daytona Connection form">
+        Complete the form by providing:
+        - A descriptive name for the connection
+        - An optional description
+        - The API Key value from the previous step
+      </Step>
+      <Step title="Connection created">
+        After submitting the form, your **Daytona Connection** will be successfully created and ready to use with your Infisical project.
+      </Step>
+    </Steps>
+
+  </Tab>
+
+  <Tab title="API">
+    To create a Daytona Connection via API, send a request to the [Create Daytona Connection](/api-reference/endpoints/app-connections/daytona/create) endpoint.
+
+    ### Sample request
+
+    ```bash Request
+    curl    --request POST \
+            --url https://app.infisical.com/api/v1/app-connections/daytona \
+            --header 'Content-Type: application/json' \
+            --data '{
+                "name": "my-daytona-connection",
+                "method": "api-key",
+                "projectId": "7ffbb072-2575-495a-b5b0-127f88caef78",
+                "credentials": {
+                    "apiKey": "[API KEY]"
+                }
+            }'
+    ```
+
+    ### Sample response
+
+    ```bash Response
+    {
+      "appConnection": {
+          "id": "e5d18aca-86f7-4026-a95e-efb8aeb0d8e6",
+          "name": "my-daytona-connection",
+          "projectId": "7ffbb072-2575-495a-b5b0-127f88caef78",
+          "description": null,
+          "version": 1,
+          "orgId": "6f03caa1-a5de-43ce-b127-95a145d3464c",
+          "createdAt": "2025-04-23T19:46:34.831Z",
+          "updatedAt": "2025-04-23T19:46:34.831Z",
+          "isPlatformManagedCredentials": false,
+          "credentialsHash": "7c2d371dec195f82a6a0d5b41c970a229cfcaf88e894a5b6395e2dbd0280661f",
+          "app": "daytona",
+          "method": "api-key",
+          "credentials": {}
+      }
+    }
+    ```
+
+  </Tab>
+</Tabs>

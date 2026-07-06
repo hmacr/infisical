@@ -143,6 +143,12 @@ import {
   TValidateDatadogConnectionCredentialsSchema
 } from "./datadog";
 import {
+  TDaytonaConnection,
+  TDaytonaConnectionConfig,
+  TDaytonaConnectionInput,
+  TValidateDaytonaConnectionCredentialsSchema
+} from "./daytona";
+import {
   TDbtConnection,
   TDbtConnectionConfig,
   TDbtConnectionInput,
@@ -508,6 +514,7 @@ export type TAppConnection = { id: string; configuration?: TAppConnectionConfigu
   | TConvexConnection
   | THasuraCloudConnection
   | TQoveryConnection
+  | TDaytonaConnection
 );
 
 export type TAppConnectionRaw = NonNullable<Awaited<ReturnType<TAppConnectionDALFactory["findById"]>>>;
@@ -592,6 +599,7 @@ export type TAppConnectionInput = { id: string } & (
   | TConvexConnectionInput
   | THasuraCloudConnectionInput
   | TQoveryConnectionInput
+  | TDaytonaConnectionInput
 );
 
 export type TSqlConnectionInput =
@@ -707,7 +715,8 @@ export type TAppConnectionConfig =
   | TF5BigIpConnectionConfig
   | TConvexConnectionConfig
   | THasuraCloudConnectionConfig
-  | TQoveryConnectionConfig;
+  | TQoveryConnectionConfig
+  | TDaytonaConnectionConfig;
 
 export type TValidateAppConnectionCredentialsSchema =
   | TValidateAwsConnectionCredentialsSchema
@@ -782,7 +791,8 @@ export type TValidateAppConnectionCredentialsSchema =
   | TValidateF5BigIpConnectionCredentialsSchema
   | TValidateConvexConnectionCredentialsSchema
   | TValidateHasuraCloudConnectionCredentialsSchema
-  | TValidateQoveryConnectionCredentialsSchema;
+  | TValidateQoveryConnectionCredentialsSchema
+  | TValidateDaytonaConnectionCredentialsSchema;
 
 export type TListAwsConnectionKmsKeys = {
   connectionId: string;

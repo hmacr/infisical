@@ -71,7 +71,8 @@ export enum AppConnection {
   Convex = "convex",
   HasuraCloud = "hasura-cloud",
   Qovery = "qovery",
-  Cloud66 = "cloud-66"
+  Cloud66 = "cloud-66",
+  Daytona = "daytona"
 }
 
 export enum AWSRegion {

@@ -118,6 +118,12 @@ import {
   TCloudflareWorkersSyncListItem,
   TCloudflareWorkersSyncWithCredentials
 } from "./cloudflare-workers";
+import {
+  TDaytonaSync,
+  TDaytonaSyncInput,
+  TDaytonaSyncListItem,
+  TDaytonaSyncWithCredentials
+} from "./daytona/daytona-sync-types";
 import { TDevinSync, TDevinSyncInput, TDevinSyncListItem, TDevinSyncWithCredentials } from "./devin/devin-sync-types";
 import {
   TDigitalOceanAppPlatformSyncInput,
@@ -265,7 +271,8 @@ export type TSecretSync =
   | TTravisCISync
   | TSnowflakeSync
   | THasuraCloudSync
-  | TCloud66Sync;
+  | TCloud66Sync
+  | TDaytonaSync;
 
 export type TSecretSyncWithCredentials =
   | TAwsParameterStoreSyncWithCredentials
@@ -313,7 +320,8 @@ export type TSecretSyncWithCredentials =
   | TTravisCISyncWithCredentials
   | TSnowflakeSyncWithCredentials
   | THasuraCloudSyncWithCredentials
-  | TCloud66SyncWithCredentials;
+  | TCloud66SyncWithCredentials
+  | TDaytonaSyncWithCredentials;
 
 export type TSecretSyncInput =
   | TAwsParameterStoreSyncInput
@@ -361,7 +369,8 @@ export type TSecretSyncInput =
   | TTravisCISyncInput
   | TSnowflakeSyncInput
   | THasuraCloudSyncInput
-  | TCloud66SyncInput;
+  | TCloud66SyncInput
+  | TDaytonaSyncInput;
 
 export type TSecretSyncListItem =
   | TAwsParameterStoreSyncListItem
@@ -409,7 +418,8 @@ export type TSecretSyncListItem =
   | TTravisCISyncListItem
   | TSnowflakeSyncListItem
   | THasuraCloudSyncListItem
-  | TCloud66SyncListItem;
+  | TCloud66SyncListItem
+  | TDaytonaSyncListItem;
 
 export type TSyncOptionsConfig = {
   canImportSecrets: boolean;

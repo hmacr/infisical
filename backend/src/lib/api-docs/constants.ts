@@ -2852,6 +2852,9 @@ export const AppConnections = {
     CHECKLY: {
       apiKey: "The API key used to authenticate with Checkly."
     },
+    DAYTONA: {
+      apiKey: "The API key used to authenticate with Daytona."
+    },
     SUPABASE: {
       accessKey: "The Key used to access Supabase.",
       instanceUrl: "The URL used to access Supabase."
@@ -3249,6 +3252,10 @@ export const SecretSyncs = {
     },
     CHECKLY: {
       accountId: "The ID of the Checkly account to sync secrets to."
+    },
+    DAYTONA: {
+      organizationId: "The ID of the Daytona organization to sync secrets to.",
+      organizationName: "The name of the Daytona organization to sync secrets to."
     },
     SUPABASE: {
       projectId: "The ID of the Supabase project to sync secrets to.",
